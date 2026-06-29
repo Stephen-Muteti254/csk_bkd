@@ -1,0 +1,25 @@
+{% extends "emails/base.html" %}
+
+{% block content %}
+  <p style="font-size:15px;margin-bottom:16px;">
+    Hi <strong>{{ full_name }}</strong>,
+  </p>
+
+  <div style="
+    background:#f8fafc;
+    padding:16px;
+    border-radius:6px;
+    margin-bottom:24px;
+    font-size:14px;
+    line-height:1.7;
+  ">
+    <p style="line-height:1.6;">
+      {{ message }}
+  </p>
+  </div>
+
+  <p style="margin-top:32px;font-size:14px;">
+    Best regards,<br />
+    <strong>{{ sender_team }}</strong>
+  </p>
+{% endblock %}
