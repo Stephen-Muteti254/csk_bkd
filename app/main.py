@@ -33,15 +33,11 @@ def create_app(config_name=None):
     origins = [o.strip() for o in app.config["CORS_ORIGINS"].split(",")]
 
     origins.extend([
-        "https://academichubpro.com",
-        "https://itnest.org",
-        "https://insightpay.org",
+        "https://campussupportkenya.co.ke",
     ])
 
     # Subdomains (regex)
-    origins.append(re.compile(r"https://.*\.academichubpro\.com"))
-    origins.append(re.compile(r"https://.*\.itnest\.org"))
-    origins.append(re.compile(r"https://.*\.insightpay\.org"))
+    origins.append(re.compile(r"https://.*\.campussupportkenya\.co\.ke"))
 
     CORS(
         app,

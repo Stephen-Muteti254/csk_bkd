@@ -1,0 +1,48 @@
+{% extends "emails/base.html" %}
+
+{% block content %}
+
+<p>Hello <strong>{{ full_name }}</strong>,</p>
+
+<p>
+Thank you for contacting <strong>{{ company_name }}</strong>.
+We have successfully received your support request and our team has been notified.
+</p>
+
+<div class="notice" style="margin:20px 0;text-align:left;">
+    <strong>Report Summary</strong>
+
+    <p>
+        <strong>Category:</strong>
+        {{ report.category }}
+    </p>
+
+    <p>
+        <strong>Status:</strong>
+        {{ report.status }}
+    </p>
+
+    <p>
+        <strong>Description:</strong><br>
+        {{ report.description }}
+    </p>
+</div>
+
+<p>
+Our support team will review your submission and contact you if additional information is required.
+</p>
+
+<p>
+You will receive another email whenever the status of your request changes.
+</p>
+
+<p>
+Thank you for trusting {{ company_name }}.
+</p>
+
+<p>
+Kind regards,<br>
+<strong>The Campus Support Kenya Team</strong>
+</p>
+
+{% endblock %}

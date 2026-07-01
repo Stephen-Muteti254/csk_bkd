@@ -1,0 +1,47 @@
+{% extends "emails/base.html" %}
+
+{% block content %}
+
+<p>Hello <strong>{{ full_name }}</strong>,</p>
+
+<p>
+Welcome to <strong>{{ company_name }}</strong>.
+Your student profile has been successfully registered.
+</p>
+
+<div class="notice" style="margin:20px 0;text-align:left;">
+
+    <p>
+        <strong>CSK ID:</strong>
+        {{ student.csk_id }}
+    </p>
+
+    <p>
+        Please keep this identifier safe.
+        It will be required whenever you request counselling or other support services.
+    </p>
+
+</div>
+
+<p>
+As a registered member of Campus Support Kenya, you can access confidential support services including:
+</p>
+
+<ul>
+    <li>Counselling</li>
+    <li>Abuse Support</li>
+    <li>Academic Follow-up</li>
+    <li>Financial Wellbeing Guidance</li>
+    <li>Student Advocacy</li>
+</ul>
+
+<p>
+We're delighted to have you with us and look forward to supporting your academic journey.
+</p>
+
+<p>
+Warm regards,<br>
+<strong>The Campus Support Kenya Team</strong>
+</p>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "emails/base.html" %}
+
+{% block content %}
+
+<p>Hello <strong>{{ full_name }}</strong>,</p>
+
+<p>
+This email confirms that your Campus Support Kenya profile has recently been updated.
+</p>
+
+<div class="notice" style="margin:20px 0;text-align:left;">
+If you requested these changes, no further action is required.
+</div>
+
+<p>
+If you did not authorize these updates or believe your account has been accessed without permission, please contact the Campus Support Kenya team immediately.
+</p>
+
+<p>
+Keeping your information accurate helps us provide timely and effective support whenever you need assistance.
+</p>
+
+<p>
+Kind regards,<br>
+<strong>The Campus Support Kenya Team</strong>
+</p>
+
+{% endblock %}

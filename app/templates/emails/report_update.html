@@ -1,0 +1,57 @@
+{% extends "emails/base.html" %}
+
+{% block content %}
+
+<p>Hello <strong>{{ full_name }}</strong>,</p>
+
+<p>
+This is to let you know that your support request has been updated.
+</p>
+
+<div class="notice" style="margin:20px 0;text-align:left;">
+
+    <p>
+        <strong>Category:</strong>
+        {{ report.category }}
+    </p>
+
+    <p>
+        <strong>Current Status:</strong>
+        {{ report.status }}
+    </p>
+
+</div>
+
+{% if report.status == "Resolved" %}
+
+<p>
+Great news! Your request has now been marked as
+<strong>Resolved</strong>.
+If you still require assistance, you're always welcome to submit another request.
+</p>
+
+{% elif report.status == "In Progress" %}
+
+<p>
+Your request is currently being reviewed by one of our support coordinators.
+We appreciate your patience while we work on your case.
+</p>
+
+{% else %}
+
+<p>
+Your request has been updated and remains under review.
+</p>
+
+{% endif %}
+
+<p>
+Thank you for choosing {{ company_name }}.
+</p>
+
+<p>
+Best regards,<br>
+<strong>The Campus Support Kenya Team</strong>
+</p>
+
+{% endblock %}
